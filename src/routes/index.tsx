@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Ferragista Inácio Jardim Europa - Ferragens em Uberlândia/MG" },
       { name: "description", content: "Ferramentas, material hidráulico e elétrico, EPI's, pesca e camping no Jardim Europa, Uberlândia. Aberto todos os dias, com delivery." },
-      { property: "og:title", content: "Ferragista Inácio Jardim Europa - Uberlândia/MG" },
+      { property: "og:title", content: "Ferragista Inácio Jardim Europa - Ferragens em Uberlândia/MG" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
