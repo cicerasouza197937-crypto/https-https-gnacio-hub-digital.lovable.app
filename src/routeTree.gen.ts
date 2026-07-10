@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnidadeRouteImport } from './routes/unidade'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -23,6 +24,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const UnidadeRoute = UnidadeRouteImport.update({
   id: '/unidade',
   path: '/unidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuemSomosRoute = QuemSomosRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/produtos': typeof ProdutosRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unidade': typeof UnidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/produtos': typeof ProdutosRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unidade': typeof UnidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/produtos': typeof ProdutosRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unidade': typeof UnidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/produtos'
     | '/quem-somos'
+    | '/sitemap.xml'
     | '/unidade'
     | '/blog/$slug'
     | '/blog/'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/produtos'
     | '/quem-somos'
+    | '/sitemap.xml'
     | '/unidade'
     | '/blog/$slug'
     | '/blog'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/produtos'
     | '/quem-somos'
+    | '/sitemap.xml'
     | '/unidade'
     | '/blog/$slug'
     | '/blog/'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   ProdutosRoute: typeof ProdutosRoute
   QuemSomosRoute: typeof QuemSomosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UnidadeRoute: typeof UnidadeRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       path: '/unidade'
       fullPath: '/unidade'
       preLoaderRoute: typeof UnidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quem-somos': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   ProdutosRoute: ProdutosRoute,
   QuemSomosRoute: QuemSomosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   UnidadeRoute: UnidadeRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
