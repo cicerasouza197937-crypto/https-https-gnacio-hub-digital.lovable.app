@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { SITE, LOGO_URL } from "@/lib/site";
-import { LOGO_URL as _ } from "@/lib/products";
+import { SITE } from "@/lib/site";
+import { LOGO_URL } from "@/lib/products";
 import { useState } from "react";
 import { Menu, X, MapPin, Phone } from "lucide-react";
 
