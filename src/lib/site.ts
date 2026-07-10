@@ -1,0 +1,40 @@
+export const SITE = {
+  name: "Ferragista Inácio - Jardim Europa",
+  shortName: "Ferragista Inácio",
+  phone: "(34) 98409-5710",
+  phoneRaw: "5534984095710",
+  whatsapp: "https://wa.me/5534984095710",
+  address: "Av. José Fonseca e Sílva, 4675 - Jardim Europa, Uberlândia - MG, 38414-531",
+  mapsEmbed:
+    "https://www.google.com/maps?q=Av.+Jos%C3%A9+Fonseca+e+S%C3%ADlva,+4675+-+Jardim+Europa,+Uberl%C3%A2ndia+-+MG&output=embed",
+  mapsLink:
+    "https://www.google.com/maps/search/?api=1&query=Ferragista+Inacio+Jardim+Europa+Uberlandia",
+  reviewsLink:
+    "https://www.google.com/search?q=Ferragista+Inacio+Jardim+Europa+Uberlandia+avalia%C3%A7%C3%B5es",
+  hours: [
+    { d: "Segunda-feira", h: "08:00 – 18:00" },
+    { d: "Terça-feira", h: "08:00 – 18:00" },
+    { d: "Quarta-feira", h: "08:00 – 18:00" },
+    { d: "Quinta-feira", h: "08:00 – 18:00" },
+    { d: "Sexta-feira", h: "08:00 – 18:00" },
+    { d: "Sábado", h: "08:00 – 16:00" },
+    { d: "Domingo", h: "08:00 – 12:00" },
+  ],
+  services: [
+    "Material Hidráulico",
+    "Material Elétrico",
+    "Ferramentas Elétricas",
+    "Ferramentas Manuais",
+    "Alicates",
+    "EPI's - Equipamentos de Proteção",
+    "Venda de Cadeados",
+    "Venda de Correntes",
+    "Venda de Escadas",
+    "Venda de Ganchos",
+    "Venda de Rodas",
+    "Artigos para Pesca",
+    "Artigos para Camping",
+    "Loja de Ferragens aos Finais de Semana",
+    "Loja de Ferragens Delivery",
+  ],
+};
