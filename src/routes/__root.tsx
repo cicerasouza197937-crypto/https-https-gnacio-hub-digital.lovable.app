@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header, Footer, FloatingWhats } from "../components/site-chrome";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +78,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Ferragista Inácio Jardim Europa - Ferragens, Ferramentas e Material de Construção em Uberlândia" },
+      { name: "description", content: "Ferragista Inácio no Jardim Europa, Uberlândia/MG. Ferramentas, material hidráulico e elétrico, EPI's, pesca e camping. Aberto todos os dias. Delivery e cotação rápida." },
+      { name: "author", content: "Ferragista Inácio Jardim Europa" },
+      { name: "keywords", content: "ferragista uberlandia, ferragem jardim europa, material hidraulico uberlandia, ferramentas uberlandia, ferragista aberto domingo, EPI, material eletrico" },
+      { property: "og:title", content: "Ferragista Inácio - Jardim Europa, Uberlândia/MG" },
+      { property: "og:description", content: "Sua ferragem completa no Jardim Europa. Aberto de segunda a domingo. Delivery, cotação e atendimento rápido." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Ferragista Inácio Jardim Europa" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HardwareStore",
+          name: "Ferragista Inácio Jardim Europa",
+          image: "",
+          telephone: "+55 34 98409-5710",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Av. José Fonseca e Sílva, 4675",
+            addressLocality: "Uberlândia",
+            addressRegion: "MG",
+            postalCode: "38414-531",
+            addressCountry: "BR",
+          },
+          openingHours: [
+            "Mo-Fr 08:00-18:00",
+            "Sa 08:00-16:00",
+            "Su 08:00-12:00",
+          ],
+          areaServed: "Uberlândia e região",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +148,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1"><Outlet /></main>
+        <Footer />
+        <FloatingWhats />
+      </div>
     </QueryClientProvider>
   );
 }
