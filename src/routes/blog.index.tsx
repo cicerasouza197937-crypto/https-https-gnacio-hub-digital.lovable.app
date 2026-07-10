@@ -31,7 +31,7 @@ const POSTS = [
   },
 ];
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   component: BlogIndex,
   head: () => ({
     meta: [
@@ -60,10 +60,10 @@ function BlogIndex() {
 
       <section className="section-y">
         <div className="container-x grid gap-6 md:grid-cols-2">
-          {posts.map((p) => (
+          {posts.map((p: typeof POSTS[number]) => (
             <article key={p.slug} className="group flex flex-col rounded-xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:shadow-xl">
               <div className="flex flex-wrap gap-2">
-                {p.tags.map((t) => (
+                {p.tags.map((t: string) => (
                   <span key={t} className="rounded-full bg-brand/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-brand">{t}</span>
                 ))}
               </div>

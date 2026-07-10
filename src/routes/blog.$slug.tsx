@@ -90,7 +90,7 @@ function PostPage() {
       <h1 className="mt-4 font-display text-3xl font-bold uppercase md:text-4xl">{post.title}</h1>
       <p className="mt-2 text-sm text-muted-foreground">Publicado em {post.date}</p>
       <div className="mt-8 space-y-4 text-lg leading-relaxed text-foreground/90">
-        {post.body.map((p, i) => (
+        {post.body.map((p: string, i: number) => (
           <p key={i} dangerouslySetInnerHTML={{ __html: p.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") }} />
         ))}
       </div>
