@@ -28,7 +28,7 @@ export function Header() {
       </div>
       <div className="container-x flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src={_} alt="Ferragista Inácio" className="h-12 w-12 rounded-md object-cover ring-1 ring-border" />
+          <img src={LOGO_URL} alt="Ferragista Inácio" className="h-12 w-12 rounded-md object-cover ring-1 ring-border" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold uppercase tracking-wide text-secondary">Ferragista Inácio</div>
             <div className="text-[11px] text-muted-foreground">Jardim Europa • Uberlândia/MG</div>
