@@ -27,12 +27,6 @@ function HomePage() {
             <span className="inline-flex items-center gap-2 rounded-full border border-accent-yellow/40 bg-accent-yellow/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-yellow">
               <MapPin className="h-3.5 w-3.5" /> Jardim Europa • Uberlândia/MG
             </span>
-            <h1 className="mt-4 font-display text-5xl font-bold uppercase leading-[0.95] md:text-7xl">
-              <span className="block">
-                SUA FERRAGEM <span className="text-brand">COMPLETA</span>
-              </span>
-              <span className="block mt-5">PERTINHO DE VOCÊ{"\u00a0"}</span>
-            </h1>
             <p className="mt-5 max-w-xl text-secondary-foreground/80">
               Ferramentas, material hidráulico, elétrico, EPI's, pesca e camping. Atendimento rápido, preço justo e{" "}
               <strong className="text-accent-yellow">aberto todos os dias</strong> — inclusive fins de semana.
