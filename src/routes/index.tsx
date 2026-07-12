@@ -31,7 +31,7 @@ function HomePage() {
               <span className="block">
                 SUA FERRAGEM <span className="text-brand">COMPLETA</span>
               </span>
-              <span className="block mt-5">PERTINHO DE VOCÊ{"\u00a0"}\n\n</span>
+              <span className="block mt-5">PERTINHO DE VOCÊ{"\u00a0"}</span>
             </h1>
             <p className="mt-5 max-w-xl text-secondary-foreground/80">
               Ferramentas, material hidráulico, elétrico, EPI's, pesca e camping. Atendimento rápido, preço justo e{" "}
