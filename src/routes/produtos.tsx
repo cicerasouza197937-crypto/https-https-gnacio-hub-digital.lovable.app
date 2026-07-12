@@ -51,8 +51,8 @@ function ProdutosPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((p) => (
               <article key={p.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[4/3] overflow-hidden bg-muted">
-                  <img src={p.image} alt={p.name} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" />
+                <div className="aspect-[4/3] overflow-hidden bg-white p-3 flex items-center justify-center">
+                  <img src={p.image} alt={p.name} className="max-h-full max-w-full object-contain transition group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <div className="text-[11px] font-semibold uppercase tracking-wider text-brand">{p.category}</div>
