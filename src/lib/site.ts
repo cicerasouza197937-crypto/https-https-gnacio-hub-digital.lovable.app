@@ -11,6 +11,8 @@ export const SITE = {
     "https://www.google.com/maps/search/?api=1&query=Ferragista+Inacio+Jardim+Europa+Uberlandia",
   reviewsLink:
     "https://www.google.com/search?q=Ferragista+Inacio+Jardim+Europa+Uberlandia+avalia%C3%A7%C3%B5es",
+  facebook: "https://www.facebook.com/ferragistainacio",
+  instagram: "https://www.instagram.com/ferragistainacio",
   hours: [
     { d: "Segunda-feira", h: "08:00 – 18:00" },
     { d: "Terça-feira", h: "08:00 – 18:00" },
