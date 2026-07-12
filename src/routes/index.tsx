@@ -55,18 +55,13 @@ function HomePage() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-3">
-              {PRODUCTS.slice(0, 4).map((p) => (
-                <div key={p.slug} className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2">
-                  <img src={p.image} alt={p.name} className="aspect-square w-full rounded-lg object-cover transition group-hover:scale-105" loading="lazy" />
-                  <div className="px-2 pb-1 pt-2 text-xs">
-                    <div className="line-clamp-1 font-semibold">{p.name}</div>
-                    {p.price && <div className="text-accent-yellow">{p.price}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 -z-0 rounded-3xl bg-gradient-to-br from-accent-yellow/20 via-transparent to-white/10 blur-2xl" />
+            <img
+              src={LOGO_URL}
+              alt="Comercial Inácio Ferragista - Jardim Europa"
+              className="relative z-10 w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
+            />
           </div>
         </div>
       </section>
