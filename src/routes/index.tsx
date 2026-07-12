@@ -57,7 +57,7 @@ function HomePage() {
             <img
               src={LOGO_URL}
               alt="Comercial Inácio Ferragista - Jardim Europa"
-              className="relative z-10 w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
+              className="relative z-10 w-full max-w-lg rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
             />
           </div>
         </div>
