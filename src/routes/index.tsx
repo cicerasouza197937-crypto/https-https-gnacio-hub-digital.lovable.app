@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
-import { PRODUCTS } from "@/lib/products";
+import { LOGO_URL } from "@/lib/products";
 import { ArrowRight, Truck, Clock, Wrench, ShieldCheck, Star, MapPin, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -17,7 +17,6 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featured = PRODUCTS.slice(0, 6);
   return (
     <>
       {/* HERO */}
@@ -56,18 +55,47 @@ function HomePage() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-3">
-              {PRODUCTS.slice(0, 4).map((p) => (
-                <div key={p.slug} className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2">
-                  <img src={p.image} alt={p.name} className="aspect-square w-full rounded-lg object-cover transition group-hover:scale-105" loading="lazy" />
-                  <div className="px-2 pb-1 pt-2 text-xs">
-                    <div className="line-clamp-1 font-semibold">{p.name}</div>
-                    {p.price && <div className="text-accent-yellow">{p.price}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 -z-0 rounded-3xl bg-gradient-to-br from-accent-yellow/20 via-transparent to-white/10 blur-2xl" />
+            <img
+              src={LOGO_URL}
+              alt="Comercial Inácio Ferragista - Jardim Europa"
+              className="relative z-10 w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* QUEM SOMOS - segunda dobra */}
+      <section className="section-y bg-muted/40">
+        <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+          <img
+            src={LOGO_URL}
+            alt="Comercial Inácio Ferragista"
+            className="w-full max-w-sm justify-self-center rounded-xl border border-border bg-white p-4 shadow-md"
+          />
+          <div>
+            <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand">
+              Quem Somos
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold uppercase md:text-4xl">
+              A ferragem do bairro que virou referência da região
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              A <strong className="text-foreground">Ferragista Inácio</strong> nasceu no coração do{" "}
+              <strong className="text-foreground">Jardim Europa, em Uberlândia/MG</strong>, com um propósito
+              simples: oferecer atendimento próximo, produtos confiáveis e preço justo para quem cuida da casa,
+              faz obra, trabalha na construção civil ou curte o mundo pesca e camping.
+            </p>
+            <p className="mt-3 text-muted-foreground">
+              Ao longo dos anos, viramos ponto de referência no bairro por sempre ter em estoque o que ninguém
+              acha — do <em>parafuso avulso</em> à <em>ferramenta elétrica profissional</em>. Nossa equipe
+              conhece cada cliente pelo nome e cada produto pela função. Não vendemos apenas ferragens:
+              entregamos solução.
+            </p>
+            <Link to="/quem-somos" className="btn-primary mt-6 text-sm">
+              Conheça nossa história <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -85,38 +113,6 @@ function HomePage() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-md bg-brand/10 text-brand"><Wrench className="h-4 w-4" /></span>
                 <span className="font-medium">{s}</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUTOS DESTAQUE */}
-      <section className="section-y bg-muted/40">
-        <div className="container-x">
-          <div className="mb-10 flex items-end justify-between gap-4">
-            <div>
-              <h2 className="font-display text-3xl font-bold uppercase md:text-4xl">Destaques da loja</h2>
-              <p className="mt-2 text-muted-foreground">Produtos e ofertas mais procurados esta semana.</p>
-            </div>
-            <Link to="/produtos" className="hidden md:inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
-              Ver todos <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((p) => (
-              <article key={p.slug} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[4/3] overflow-hidden bg-muted">
-                  <img src={p.image} alt={p.name} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <div className="text-[11px] font-semibold uppercase tracking-wider text-brand">{p.category}</div>
-                  <h3 className="mt-1 font-display text-lg font-bold">{p.name}</h3>
-                  {p.price && <div className="mt-1 text-xl font-bold text-secondary">{p.price}</div>}
-                  <a href={`${SITE.whatsapp}?text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${p.name}`)}`} target="_blank" rel="noreferrer noopener" className="btn-whatsapp mt-4 w-full text-sm">
-                    Consultar disponibilidade
-                  </a>
-                </div>
-              </article>
             ))}
           </div>
         </div>

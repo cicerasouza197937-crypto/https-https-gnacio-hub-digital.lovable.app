@@ -12,7 +12,7 @@ import disco from "@/assets/products/disco-corte.jpg.asset.json";
 import pu from "@/assets/products/pu-multiuso.jpg.asset.json";
 import lixadeira from "@/assets/products/lixadeira.jpg.asset.json";
 import trinchas from "@/assets/products/trinchas.jpg.asset.json";
-import logo from "@/assets/products/logo.jpg.asset.json";
+import logo from "@/assets/products/logo-ferragista.png.asset.json";
 
 export const LOGO_URL = logo.url;
 

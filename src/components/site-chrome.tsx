@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 import { LOGO_URL } from "@/lib/products";
 import { useState } from "react";
-import { Menu, X, MapPin, Phone } from "lucide-react";
+import { Menu, X, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Início" },
@@ -23,12 +23,16 @@ export function Header() {
       <div className="bg-secondary text-secondary-foreground text-xs">
         <div className="container-x flex flex-wrap items-center justify-between gap-2 py-2">
           <span className="inline-flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-accent-yellow" /> Av. José Fonseca e Sílva, 4675 - Jardim Europa, Uberlândia/MG</span>
-          <a href={`tel:+${SITE.phoneRaw}`} className="inline-flex items-center gap-1.5 hover:text-accent-yellow"><Phone className="h-3.5 w-3.5" /> {SITE.phone}</a>
+          <div className="flex items-center gap-3">
+            <a href={SITE.facebook} target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="hover:text-accent-yellow"><Facebook className="h-4 w-4" /></a>
+            <a href={SITE.instagram} target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="hover:text-accent-yellow"><Instagram className="h-4 w-4" /></a>
+            <a href={`tel:+${SITE.phoneRaw}`} className="inline-flex items-center gap-1.5 hover:text-accent-yellow"><Phone className="h-3.5 w-3.5" /> {SITE.phone}</a>
+          </div>
         </div>
       </div>
       <div className="container-x flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src={LOGO_URL} alt="Ferragista Inácio" className="h-12 w-12 rounded-md object-cover ring-1 ring-border" />
+          <img src={LOGO_URL} alt="Ferragista Inácio" className="h-12 w-12 rounded-md bg-white object-contain p-0.5 ring-1 ring-border" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold uppercase tracking-wide text-secondary">Ferragista Inácio</div>
             <div className="text-[11px] text-muted-foreground">Jardim Europa • Uberlândia/MG</div>
@@ -87,6 +91,10 @@ export function Footer() {
           <a href={SITE.whatsapp} target="_blank" rel="noreferrer noopener" className="btn-whatsapp mt-4 text-sm">
             Fale no WhatsApp
           </a>
+          <div className="mt-4 flex items-center gap-3">
+            <a href={SITE.facebook} target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-accent-yellow hover:text-secondary transition"><Facebook className="h-4 w-4" /></a>
+            <a href={SITE.instagram} target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-accent-yellow hover:text-secondary transition"><Instagram className="h-4 w-4" /></a>
+          </div>
         </div>
         <div>
           <h4 className="text-sm font-bold uppercase tracking-wider text-accent-yellow">Navegação</h4>
