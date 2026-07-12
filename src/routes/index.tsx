@@ -17,7 +17,6 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featured = PRODUCTS.slice(0, 6);
   return (
     <>
       {/* HERO */}
