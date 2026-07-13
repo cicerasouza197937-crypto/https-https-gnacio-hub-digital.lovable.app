@@ -24,10 +24,9 @@ export function Header() {
         <div className="container-x flex flex-wrap items-center justify-between gap-2 py-2">
           <span className="inline-flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-accent-yellow" /> Av. José Fonseca e Sílva, 4675 - Jardim Europa, Uberlândia/MG</span>
           <div className="flex items-center gap-3">
-            <a href={SITE.facebook} target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="hover:text-accent-yellow"><Facebook className="h-4 w-4" /></a>
-            <a href={SITE.instagram} target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="hover:text-accent-yellow"><Instagram className="h-4 w-4" /></a>
             <a href={`tel:+${SITE.phoneRaw}`} className="inline-flex items-center gap-1.5 hover:text-accent-yellow"><Phone className="h-3.5 w-3.5" /> {SITE.phone}</a>
           </div>
+
         </div>
       </div>
       <div className="container-x flex items-center justify-between py-3">
