@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 import { LOGO_URL } from "@/lib/products";
-import { ArrowRight, Truck, Clock, Wrench, ShieldCheck, Star, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Wrench, Star, MapPin, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
