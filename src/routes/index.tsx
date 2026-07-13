@@ -27,11 +27,19 @@ function HomePage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-accent-yellow/40 bg-accent-yellow/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-yellow">
             <MapPin className="h-3.5 w-3.5" /> Jardim Europa • Uberlândia/MG
           </span>
+          <div className="w-full text-center">
+            <h1 className="font-display text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-lg md:text-6xl lg:text-7xl">
+              Comercial Inácio
+            </h1>
+            <p className="mt-2 font-display text-2xl font-bold uppercase tracking-widest text-accent-yellow md:text-3xl">
+              Ferragista
+            </p>
+          </div>
           <div className="relative w-full max-w-screen-lg">
             <div className="absolute inset-0 -z-0 rounded-3xl bg-gradient-to-br from-accent-yellow/20 via-transparent to-white/10 blur-2xl" />
             <img
-              src={LOGO_URL}
-              alt="Ferragista Inácio - Jardim Europa"
+              src={heroComercialInacio.url}
+              alt="Comercial Inácio Ferragista - Mix de produtos"
               width={1350}
               height={1080}
               className="relative z-10 mx-auto w-full rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
