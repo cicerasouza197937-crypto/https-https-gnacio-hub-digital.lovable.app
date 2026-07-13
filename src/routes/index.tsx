@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 import { LOGO_URL } from "@/lib/products";
-import { ArrowRight, Truck, Clock, Wrench, ShieldCheck, Star, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Wrench, Star, MapPin, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -22,46 +22,35 @@ function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-secondary text-secondary-foreground">
         <div className="absolute inset-0 opacity-[0.08] [background-image:repeating-linear-gradient(45deg,#fff_0_1px,transparent_1px_14px)]" />
-        <div className="container-x relative grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-accent-yellow/40 bg-accent-yellow/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-yellow">
-              <MapPin className="h-3.5 w-3.5" /> Jardim Europa • Uberlândia/MG
-            </span>
-            <p className="mt-5 max-w-xl text-secondary-foreground/80">
-              Ferramentas, material hidráulico, elétrico, EPI's, pesca e camping. Atendimento rápido, preço justo e{" "}
-              <strong className="text-accent-yellow">aberto todos os dias</strong> — inclusive fins de semana.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href={SITE.whatsapp} target="_blank" rel="noreferrer noopener" className="btn-whatsapp">Fale no WhatsApp</a>
-              <Link to="/produtos" className="btn-primary">Ver produtos <ArrowRight className="h-4 w-4" /></Link>
-              <Link to="/cotacao" className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 font-semibold hover:bg-white/5">
-                Solicitar cotação
-              </Link>
-            </div>
-            <div className="mt-8 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
-              {[
-                { i: <Clock className="h-5 w-5" />, t: "Aberto 7 dias" },
-                { i: <Truck className="h-5 w-5" />, t: "Delivery local" },
-                { i: <Wrench className="h-5 w-5" />, t: "Ferramentas pro" },
-                { i: <ShieldCheck className="h-5 w-5" />, t: "EPI's completos" },
-              ].map((b) => (
-                <div key={b.t} className="flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2">
-                  <span className="text-accent-yellow">{b.i}</span>
-                  <span className="font-medium">{b.t}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative flex items-center justify-center">
+        <div className="container-x relative flex flex-col items-center gap-8 py-12 md:py-16">
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent-yellow/40 bg-accent-yellow/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-yellow">
+            <MapPin className="h-3.5 w-3.5" /> Jardim Europa • Uberlândia/MG
+          </span>
+          <div className="relative w-full max-w-[540px]">
             <div className="absolute inset-0 -z-0 rounded-3xl bg-gradient-to-br from-accent-yellow/20 via-transparent to-white/10 blur-2xl" />
             <img
               src={LOGO_URL}
-              alt="Comercial Inácio Ferragista - Jardim Europa"
-              className="relative z-10 w-full max-w-lg rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
+              alt="Ferragista Inácio - Jardim Europa"
+              width={1080}
+              height={1350}
+              className="relative z-10 mx-auto w-full rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
+              style={{ aspectRatio: "1080 / 1350", objectFit: "contain" }}
             />
+          </div>
+          <p className="max-w-2xl text-center text-secondary-foreground/80">
+            Ferramentas, material hidráulico, elétrico, EPI's, pesca e camping. Atendimento rápido, preço justo e{" "}
+            <strong className="text-accent-yellow">aberto todos os dias</strong> — inclusive fins de semana.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href={SITE.whatsapp} target="_blank" rel="noreferrer noopener" className="btn-whatsapp">Fale no WhatsApp</a>
+            <Link to="/produtos" className="btn-primary">Ver produtos <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/cotacao" className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 font-semibold hover:bg-white/5">
+              Solicitar cotação
+            </Link>
           </div>
         </div>
       </section>
+
 
       {/* QUEM SOMOS - segunda dobra */}
       <section className="section-y bg-muted/40">
