@@ -26,15 +26,15 @@ function HomePage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-accent-yellow/40 bg-accent-yellow/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-yellow">
             <MapPin className="h-3.5 w-3.5" /> Jardim Europa • Uberlândia/MG
           </span>
-          <div className="relative w-full max-w-[540px]">
+          <div className="relative w-full max-w-screen-lg">
             <div className="absolute inset-0 -z-0 rounded-3xl bg-gradient-to-br from-accent-yellow/20 via-transparent to-white/10 blur-2xl" />
             <img
               src={LOGO_URL}
               alt="Ferragista Inácio - Jardim Europa"
-              width={1080}
-              height={1350}
+              width={1350}
+              height={1080}
               className="relative z-10 mx-auto w-full rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl"
-              style={{ aspectRatio: "1080 / 1350", objectFit: "contain" }}
+              style={{ aspectRatio: "16 / 9", objectFit: "contain" }}
             />
           </div>
           <p className="max-w-2xl text-center text-secondary-foreground/80">
