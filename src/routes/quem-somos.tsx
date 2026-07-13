@@ -30,7 +30,7 @@ function QuemSomos() {
           <img src={LOGO_URL} alt="Comercial Inácio Ferragista" className="w-full max-w-sm rounded-xl border border-border shadow-md" />
           <div className="prose prose-neutral max-w-none">
             <p className="text-lg">
-              A <strong>Ferragista Inácio</strong> nasceu no coração do <strong>Jardim Europa, em Uberlândia/MG</strong>,
+              <strong>Comercial Inácio Ferragista</strong> nasceu no coração do <strong>Jardim Europa, em Uberlândia/MG</strong>,
               com um propósito simples: oferecer atendimento próximo, produtos confiáveis e preço justo para quem
               cuida da casa, faz obra, trabalha na construção civil ou curte o mundo pesca e camping.
             </p>

@@ -77,7 +77,7 @@ function HomePage() {
               A ferragem do bairro que virou referência da região
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A <strong className="text-foreground">Ferragista Inácio</strong> nasceu no coração do{" "}
+              <strong className="text-foreground">Comercial Inácio Ferragista</strong> nasceu no coração do{" "}
               <strong className="text-foreground">Jardim Europa, em Uberlândia/MG</strong>, com um propósito
               simples: oferecer atendimento próximo, produtos confiáveis e preço justo para quem cuida da casa,
               faz obra, trabalha na construção civil ou curte o mundo pesca e camping.
