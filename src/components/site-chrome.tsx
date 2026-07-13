@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 import { LOGO_URL } from "@/lib/products";
 import { useState } from "react";
-import { Menu, X, MapPin, Phone, Facebook, Instagram } from "lucide-react";
+import { Menu, X, MapPin, Phone } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Início" },
