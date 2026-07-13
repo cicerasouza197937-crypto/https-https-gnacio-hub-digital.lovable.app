@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 import { LOGO_URL } from "@/lib/products";
+import heroComercialInacio from "@/assets/products/hero-comercial-inacio.png.asset.json";
 import { ArrowRight, Wrench, Star, MapPin, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/")({
