@@ -90,10 +90,6 @@ export function Footer() {
           <a href={SITE.whatsapp} target="_blank" rel="noreferrer noopener" className="btn-whatsapp mt-4 text-sm">
             Fale no WhatsApp
           </a>
-          <div className="mt-4 flex items-center gap-3">
-            <a href={SITE.facebook} target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-accent-yellow hover:text-secondary transition"><Facebook className="h-4 w-4" /></a>
-            <a href={SITE.instagram} target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-accent-yellow hover:text-secondary transition"><Instagram className="h-4 w-4" /></a>
-          </div>
         </div>
         <div>
           <h4 className="text-sm font-bold uppercase tracking-wider text-accent-yellow">Navegação</h4>
